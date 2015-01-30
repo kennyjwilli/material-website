@@ -1,0 +1,38 @@
+<!--
+  Copyright (c) 2015, Kenny Williams. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<!-- import polymer-element's definition -->
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<link rel="import" href="../../packages/core_elements/core_image.html">
+<link rel="import" href="../../packages/core_elements/core_collapse.html">
+<link rel="import" href="../../packages/paper_elements/paper_icon_button.html">
+
+<polymer-element name="about-page">
+    <template>
+        <style>
+
+        </style>
+        <div horizontal layout>
+            <div vertical layout>
+                <h2>Me</h2>
+                <img width="400" height="auto" src="http://kennyjwilliams.com/wp-content/uploads/2015/01/kenny1.jpg">
+            </div>
+            <div flex vertical layout>
+                <h2>Random stuff about me</h2>
+                <div horizontal layout center>
+                    <paper-icon-button icon="add" on-tap="{{toggleFavoriteProjects}}"></paper-icon-button>
+                    <div>My favorite projects</div>
+                </div>
+                <core-collapse opened="{{favoriteProjectsOpened}}">
+                    <div>
+                        Choosing favorites is nearly impossible! Everyone has this issue, me included. Working on the short film, The Forest, was a blast! We spent an entire day in the forest filming a short action film. I loved piecing the final version together and watching all of our hard work come together! Nearly all of the projects that I work on for iNVERSION are awesome! I recently got to travel to a mansion in Alamo that overlooks the entire tri-valley. This is by far the most beautiful estate I have ever seen let alone been privileged enough to film at!
+                    </div>
+                </core-collapse>
+            </div>
+        </div>
+    </template>
+    <script type="application/dart" src="about-page.dart"></script>
+</polymer-element>

@@ -1,0 +1,29 @@
+<!--
+  Copyright (c) 2015, Kenny Williams. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<!-- import polymer-element's definition -->
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<link rel="import" href="../../packages/paper_elements/paper_input.html">
+<link rel="import" href="../../packages/paper_elements/paper_button.html">
+<link rel="import" href="../../packages/paper_elements/paper_autogrow_textarea.html">
+
+<polymer-element name="contact-form">
+    <template>
+        <style>
+
+        </style>
+        <div layout vertical>
+            <paper-input label="Name" floatingLabel></paper-input>
+            <paper-input label="Email" floatingLabel></paper-input>
+            <paper-input label="Subject" floatingLabel></paper-input>
+            <paper-input-decorator label="Enter your message..." floatingLabel>
+                <textarea rows="5" placeholder="Type your message here..."></textarea>
+            </paper-input-decorator>
+            <paper-button on-tap="{{sendMessage}}">Send</paper-button>
+        </div>
+    </template>
+    <script type="application/dart" src="contact-form.dart"></script>
+</polymer-element>

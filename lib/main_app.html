@@ -1,0 +1,76 @@
+<!--
+  Copyright (c) 2015, Kenny Williams. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<!-- import polymer-element's definition -->
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<link rel="import" href="../../packages/core_elements/core_header_panel.html">
+<link rel="import" href="../../packages/core_elements/core_toolbar.html">
+<link rel="import" href="../../packages/core_elements/core_pages.html">
+<link rel="import" href="../../packages/paper_elements/paper_button.html">
+
+<link rel="import" href="contact-form.html">
+<link rel="import" href="about-page.html">
+
+<polymer-element name="main-app">
+    <template>
+        <style>
+            :host {
+            display: block;
+            }
+            .header-button
+            {
+                font-size: 70%;
+            }
+            .main-content
+            {
+                margin-top: 50px;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+        </style>
+
+        <core-header-panel fit>
+            <core-toolbar layout center>
+                <div flex>Hello World!</div>
+                <paper-button class="header-button" on-tap="{{blogClicked}}">Blog</paper-button>
+                <paper-button class="header-button" on-tap="{{portfolioClicked}}">Portfolio</paper-button>
+                <paper-button class="header-button" on-tap="{{contactClicked}}">Contact</paper-button>
+                <paper-button class="header-button" on-tap="{{aboutClicked}}">About</paper-button>
+            </core-toolbar>
+
+            <core-pages class="main-content" fit selected="{{selectedPage}}">
+                <!--Main page-->
+                <div>
+                    Main page
+                </div>
+
+                <!--Blog page-->
+                <div>
+                    Blog
+                </div>
+
+                <!--Portfolio page-->
+                <div>
+                    Portfolio
+                </div>
+
+                <!--Contact page-->
+                <div>
+                    <contact-form></contact-form>
+                </div>
+
+                <!--About page-->
+                <div>
+                    <about-page></about-page>
+                </div>
+            </core-pages>
+        </core-header-panel>
+
+
+
+    </template>
+    <script type="application/dart" src="main_app.dart"></script>
+</polymer-element>
