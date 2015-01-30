@@ -3,18 +3,30 @@
 
 import 'dart:html';
 
-import 'package:paper_elements/paper_input.dart';
 import 'package:polymer/polymer.dart';
 
-/// A Polymer `<main-app>` element.
 @CustomTag('contact-form')
 class ContactForm extends PolymerElement
 {
+  @observable String nameInput ="";
+  @observable String emailInput ="";
+  @observable String subjectInput ="";
+  @observable String messageInput ="";
 
   ContactForm.created() : super.created();
 
-  void sendMessage()
+  void sendForm()
   {
 
+  }
+
+  void clearForm()
+  {
+    nameInput = "";
+    emailInput = "";
+    subjectInput = "";
+    messageInput = "";
+    //Must update the label visibility due to the textarea
+    $["messagePaperInput"].updateLabelVisibility("");
   }
 }

@@ -16,13 +16,16 @@
 
         </style>
         <div layout vertical>
-            <paper-input label="Name" floatingLabel></paper-input>
-            <paper-input label="Email" floatingLabel></paper-input>
-            <paper-input label="Subject" floatingLabel></paper-input>
-            <paper-input-decorator label="Enter your message..." floatingLabel>
-                <textarea rows="5" placeholder="Type your message here..."></textarea>
+            <paper-input label="Name" value="{{nameInput}}" floatingLabel></paper-input>
+            <paper-input label="Email" value="{{emailInput}}" floatingLabel></paper-input>
+            <paper-input label="Subject" value="{{subjectInput}}" floatingLabel></paper-input>
+            <paper-input-decorator id="messagePaperInput" label="Enter your message..." floatingLabel>
+                <textarea rows="5" value="{{messageInput}}" placeholder="Type your message here..."></textarea>
             </paper-input-decorator>
-            <paper-button on-tap="{{sendMessage}}">Send</paper-button>
+            <div horizontal layout center>
+                <paper-button style="color:#3F51B5;" on-tap="{{sendForm}}">Send</paper-button>
+                <paper-button on-tap="{{clearForm}}">Clear</paper-button>
+            </div>
         </div>
     </template>
     <script type="application/dart" src="contact-form.dart"></script>
