@@ -14,9 +14,16 @@ class AboutPage extends PolymerElement
 
   AboutPage.created() : super.created();
 
-  void toggleFavoriteProjects()
+  void toggleFavoriteProjects(Event event, var detail, var target)
   {
     favoriteProjectsOpened = !favoriteProjectsOpened;
+    if(favoriteProjectsOpened)
+    {
+      target.icon = "remove";
+    }else
+    {
+      target.icon = "add";
+    }
   }
 
 }
