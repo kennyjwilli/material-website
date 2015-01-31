@@ -3,10 +3,8 @@
 
 import 'dart:html';
 
-import 'package:paper_elements/paper_input.dart';
 import 'package:polymer/polymer.dart';
 
-/// A Polymer `<main-app>` element.
 @CustomTag('about-page')
 class AboutPage extends PolymerElement
 {
