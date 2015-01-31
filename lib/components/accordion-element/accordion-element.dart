@@ -8,15 +8,19 @@ import 'package:polymer/polymer.dart';
 @CustomTag('accordion-element')
 class AccordionElement extends PolymerElement
 {
+  @observable bool autoclose = true;
   var _lastOpened = null;
   AccordionElement.created() : super.created();
 
   void itemOpened(Event event, var detail, var target)
   {
-    if(_lastOpened != null && _lastOpened.opened == true && detail.opened == false)
+    if(autoclose)
     {
-      _lastOpened.opened = false;
+      if(_lastOpened != null && _lastOpened.opened == true && detail.opened == false)
+      {
+        _lastOpened.opened = false;
+      }
+      _lastOpened = detail;
     }
-    _lastOpened = detail;
   }
 }
