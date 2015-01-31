@@ -14,6 +14,11 @@ class MainApp extends PolymerElement
 
   MainApp.created() : super.created();
 
+  void siteTitleClicked()
+  {
+    selectedPage = 0;
+  }
+
   void blogClicked()
   {
     selectedPage = 1;
