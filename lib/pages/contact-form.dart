@@ -15,6 +15,7 @@ class ContactForm extends PolymerElement
 
   ContactForm.created() : super.created();
 
+  //TODO: Move form into its own element
   void sendForm()
   {
 

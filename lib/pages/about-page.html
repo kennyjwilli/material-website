@@ -4,22 +4,47 @@
 -->
 
 <!-- import polymer-element's definition -->
-<link rel="import" href="../../packages/polymer/polymer.html">
+<link rel="import" href="../../../packages/polymer/polymer.html">
 
-<link rel="import" href="../../packages/core_elements/core_image.html">
-<link rel="import" href="../../packages/core_elements/core_collapse.html">
-<link rel="import" href="../../packages/paper_elements/paper_icon_button.html">
+<link rel="import" href="../../../packages/core_elements/core_image.html">
+<link rel="import" href="../../../packages/core_elements/core_collapse.html">
+<link rel="import" href="../../../packages/paper_elements/paper_icon_button.html">
 
-<link rel="import" href="components/accordion-element/accordion-element.html">
+<link rel="import" href="../components/accordion-element/accordion-element.html">
 
 <polymer-element name="about-page">
     <template>
         <style>
+            .person
+            {
+            display: block;
+            }
+            .person-name
+            {
+
+            }
+            .person-description
+            {
+            margin-top: 20px;
+            }
+            .person-content
+            {
+                margin-top: 10px;
+            }
+
         </style>
         <div horizontal layout>
-            <div vertical layout style="padding-right: 50px;">
+            <div vertical layout style="padding-right: 50px; width: 35%;">
                 <h2>Me</h2>
-                <img width="400" height="auto" src="http://kennyjwilliams.com/wp-content/uploads/2015/01/kenny1.jpg">
+                <img width="100%" height="auto" src="http://kennyjwilliams.com/wp-content/uploads/2015/01/kenny1.jpg">
+
+                <div class="person-description">
+                    <span class="person person-name">Kenny Williams</span>
+                    <span class="person person-description">Filmmaker & Developer</span>
+                    <span class="person person-content">
+                        Hi, I’m Kennyyy. I grew up in Livermore and love the town! I am currently attending Cal Poly San Luis Obispo, majoring in computer science! Current Resume (01/2015)
+                    </span>
+                </div>
             </div>
             <div flex>
                 <h2>Random stuff about me</h2>
