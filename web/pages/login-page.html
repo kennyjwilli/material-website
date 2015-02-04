@@ -20,8 +20,8 @@
             <paper-input-decorator label="Password" floatingLabel>
                 <input value="{{regPasswordValue}}" type="password">
             </paper-input-decorator>
-            <paper-input-decorator label="Password again" floatingLabel>
-                <input value="{{regPasswordAgainValue}}" type="password">
+            <paper-input-decorator id="passwordAgain" class="invalid" label="Password again" error="Passwords do not match" floatingLabel>
+                <input value="{{regPasswordAgainValue}}" type="password" on-input="{{inputChanged}}" required>
             </paper-input-decorator>
             <paper-button style="color:#3F51B5;" on-tap="{{registerClicked}}">Register</paper-button>
         </div>

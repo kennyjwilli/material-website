@@ -20,9 +20,34 @@ class LoginPage extends PolymerElement
 
   LoginPage.created() : super.created();
 
+  void attached()
+  {
+    super.attached();
+    _updatePasswordInvalid();
+  }
+
+  bool validatePassword()
+  {
+    if(regPasswordValue.trim() != regPasswordAgainValue.trim() || regPasswordAgainValue.trim().isEmpty)
+    {
+      return false;
+    }
+    return true;
+  }
+
+  void inputChanged()
+  {
+    _updatePasswordInvalid();
+  }
+
+  void _updatePasswordInvalid()
+  {
+    shadowRoot.querySelector("#passwordAgain").isInvalid = !validatePassword();
+  }
+
   void registerClicked()
   {
-    
+
   }
 
   void loginClicked()
