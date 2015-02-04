@@ -1,0 +1,40 @@
+<!--
+  Copyright (c) 2015, Kenny Williams. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<link rel="import" href="../packages/polymer/polymer.html">
+<link rel="import" href="../packages/paper_elements/paper_input.html">
+<link rel="import" href="../packages/paper_elements/paper_button.html">
+
+<polymer-element name="login-page">
+    <template>
+        <style>
+
+        </style>
+        <div>
+            <h2>Register</h2>
+            <paper-input-decorator label="Username" floatingLabel>
+                <input value="{{regUsernameValue}}" type="text">
+            </paper-input-decorator>
+            <paper-input-decorator label="Password" floatingLabel>
+                <input value="{{regPasswordValue}}" type="password">
+            </paper-input-decorator>
+            <paper-input-decorator label="Password again" floatingLabel>
+                <input value="{{regPasswordAgainValue}}" type="password">
+            </paper-input-decorator>
+            <paper-button style="color:#3F51B5;" on-tap="{{registerClicked}}">Register</paper-button>
+        </div>
+        <div>
+            <h2>Login</h2>
+            <paper-input-decorator label="Username" floatingLabel>
+                <input value="{{usernameValue}}" type="text">
+            </paper-input-decorator>
+            <paper-input-decorator label="Password" floatingLabel>
+                <input value="{{passwordValue}}" type="password">
+            </paper-input-decorator>
+            <paper-button style="color:#3F51B5;" on-tap="{{loginClicked}}">Login</paper-button>
+        </div>
+    </template>
+    <script type="application/dart" src="login-page.dart"></script>
+</polymer-element>

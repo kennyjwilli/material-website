@@ -39,4 +39,9 @@ class MainApp extends PolymerElement
     selectedPage = 4;
   }
 
+  void loginClicked()
+  {
+    selectedPage = 5;
+  }
+
 }
