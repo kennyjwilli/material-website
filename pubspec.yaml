@@ -7,9 +7,18 @@ description: >
 environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
-  browser: any
-  polymer: '>=0.15.4 <0.16.0'
-  paper_elements: '>=0.6.1 <0.7.0'
+    browser: any
+    polymer: '>=0.15.4 <0.16.0'
+    paper_elements: '>=0.6.1 <0.7.0'
+    redstone: '>=0.5.8 <0.6.0'
+    redstone_mapper: any
+    redstone_mapper_mongo: any
+    mongo_dart: any
+    connection_pool: any
+    crypto: any
+    shelf_static: any
+    grinder: any
 transformers:
+- redstone_mapper
 - polymer:
     entry_points: web/index.html
