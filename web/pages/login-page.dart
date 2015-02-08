@@ -28,8 +28,9 @@ class LoginPage extends PolymerElement
 
   bool validatePassword()
   {
-    if(regPasswordValue.trim() != regPasswordAgainValue.trim() || regPasswordAgainValue.trim().isEmpty)
+    if(regPasswordValue != regPasswordAgainValue || regPasswordAgainValue.isEmpty)
     {
+
       return false;
     }
     return true;
